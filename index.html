@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User token Form</title>
+  </head>
+  <body>
+    <form id="tokenForm">
+      <label for="username">Username:</label>
+      <input type="text" id="username" name="username">
+      <button type="submit"> Get Token</button>
+    </form>
+    <div id="tokenDisplay"></div>
+
+    <script>
+      document.getElementById('tokenForm').addEventListener('submit', async function (event) {
+        event.preventDefault();
+        const username = document.getElementByID('username').value;
+        const response = await fetch('/generate-token', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({ username })
+        });
+        const data = await response.json();
+        document.getElementByID('tokenDisplay').innerText = `Token: ${data.token}`;
+      });
+    </script>
+  </body>
+</html>
