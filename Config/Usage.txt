@@ -1,0 +1,7 @@
+Usage: ./cli2.js [options]
+
+Options:
+--show        Display the current configuration
+--reset     Reset the configuration to the original state
+--set <key>  <value>      Set a configuration value for the specified key
+--help, --h       Display usage information

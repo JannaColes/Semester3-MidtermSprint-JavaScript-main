@@ -1,0 +1,5 @@
+{
+  "example_key": "This is an example of a JSON file.",
+  "another_key": "This is another key in the JSON file.",
+  "--set": "key1"
+}
