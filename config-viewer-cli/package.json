@@ -1,0 +1,17 @@
+{
+  "name": "config-viewer-cli",
+  "version": "1.0.0",
+  "description": "CLI tool to view configuration file(s)",
+  "main": "config-viewer.js",
+  "bin": {
+    "config-viewer": "./config-viewer.js"
+  },
+  "dependencies": {
+    "commander": "^8.2.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
